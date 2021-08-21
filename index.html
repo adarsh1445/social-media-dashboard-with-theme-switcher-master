@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="spreadsheet" href="https://fonts.google.com/specimen/Inter">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <style>
+      body{
+        background-color:  hsl(0, 0%, 100%);
+        font-family: "Inter",sans-serif;
+      }
+      .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+      body.dark{
+        background-color: hsl(230, 17%, 14%)
+      }
+      .bgm{
+        margin-right: 170px;
+        margin-left: 170px;
+      }
+      .bg{
+        background-color: hsl(225, 100%, 98%);
+        max-height: 200px;
+      }
+      .bg.dar{
+        background-color: hsl(232, 19%, 15%);
+      }
+      .top{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         padding-top: 8px;
+         padding-bottom: 30px;
+      }
+      .titlep{
+         display: flex;
+         flex-direction: column;
+        
+      }
+      .he{
+        font-size: 2em;
+        color: hsl(230, 17%, 14%);
+        font-weight: bolder;
+      }
+
+      .he.dark{
+        color: #fff;
+      }
+      .flow{
+        font-size: 0.9em;
+        color: hsl(228, 12%, 44%);
+      }
+      .flow.dark{
+        color: hsl(228, 34%, 66%);
+      }
+      .tog{
+        color: hsl(228, 12%, 44%);
+        font-size: 0.9em;
+        align-self: center;
+        padding-right: 10px;
+        
+      }
+
+      .tog.dark{
+        color:hsl(228, 34%, 66%);
+      }
+      .sub{
+        display: flex;
+        align-self: center;
+      }
+      .cardcol{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .cardone{
+        flex: 25%;
+        background-color: hsl(227, 47%, 96%);
+        display: flex;
+        flex-direction: column;
+        max-width: 7cm;
+        border-top: 4px hsl(208, 92%, 53%) solid;
+        border-radius: 5px 5px 5px 5px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px;
+      }
+      .cardone.dark{
+        background-color: hsl(228, 28%, 20%);
+      }
+      .cardone2{
+        flex: 25%;
+        background-color: hsl(227, 47%, 96%);
+        display: flex;
+        flex-direction: column;
+        max-width: 7cm;
+        border-top: 4px hsl(203, 89%, 53%) solid;
+        border-radius: 5px 5px 5px 5px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px;
+      }
+      .cardone2.dark{
+        background-color: hsl(228, 28%, 20%);
+      }
+      .cardone3{
+        flex: 25%;
+        background-color: hsl(227, 47%, 96%);
+        display: flex;
+        flex-direction: column;
+        max-width: 7cm;
+        border-top: 4px solid;
+        border-color:  #fdc468;
+        border-radius: 5px 5px 5px 5px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px;
+      }
+       .cardone3.dark{
+        background-color:hsl(228, 28%, 20%);
+       }
+      .cardone4{
+        flex: 25%;
+        background-color: hsl(227, 47%, 96%);
+        display: flex;
+        flex-direction: column;
+        max-width: 7cm;
+        border-top: 4px hsl(348, 97%, 39%) solid;
+        border-radius: 5px 5px 5px 5px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px;
+      }
+       .cardone4.dark{
+         background-color: hsl(228, 28%, 20%);
+       }
+      .icon{
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+      .name{
+        color: hsl(228, 12%, 44%);
+        font-size: 0.9em;
+        align-self: center;
+        font-weight: bold;
+        font-family: "Inter";
+      }
+      .name.da{
+        color: hsl(228, 34%, 66%);
+      }
+      .name1{
+        color: hsl(228, 12%, 44%);
+        font-size: 0.9em;
+        align-self: center;
+        font-weight: bold;
+        font-family: "Inter";
+      }
+      .name1.da{
+        color: hsl(228, 34%, 66%);
+      }
+      .name2{
+        color: hsl(228, 12%, 44%);
+        font-size: 0.9em;
+        align-self: center;
+        font-weight: bold;
+        font-family: "Inter";
+      }
+      .name2.da{
+        color: hsl(228, 34%, 66%);
+      }
+      .name3{
+        color: hsl(228, 12%, 44%);
+        font-size: 0.9em;
+        align-self: center;
+        font-weight: bold;
+        font-family: "Inter";
+      }
+      .name3.da{
+        color: hsl(228, 34%, 66%);
+      }
+      .pic{
+         padding-right: 7px;
+         align-self: center;
+      }
+      .cl{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+
+      .yr{
+         color: hsl(230, 17%, 14%);
+         font-size: 4em;
+         font-weight: bolder;
+         padding-bottom: 0px;
+         margin-bottom: 0;
+         font-family: "Inter";
+      }
+
+      .yr.da{
+        color: hsl(0, 0%, 100%);
+      }
+      .ye{
+         color: hsl(230, 17%, 14%);
+         font-size: 4em;
+         font-weight: bolder;
+         padding-bottom: 0px;
+         margin-bottom: 0;
+         font-family: "Inter";
+      }
+
+      .ye.dark{
+        color: hsl(0, 0%, 100%);
+      }
+
+      .ye1{
+         color: hsl(230, 17%, 14%);
+         font-size: 4em;
+         font-weight: bolder;
+         padding-bottom: 0px;
+         margin-bottom: 0;
+         font-family: "Inter";
+      }
+
+      .ye1.dark{
+        color: hsl(0, 0%, 100%);
+      }
+      
+      .ye2{
+         color: hsl(230, 17%, 14%);
+         font-size: 4em;
+         font-weight: bolder;
+         padding-bottom: 0px;
+         margin-bottom: 0;
+         font-family: "Inter";
+      }
+
+      .ye2.dark{
+        color: hsl(0, 0%, 100%);
+      }
+
+
+      .ye3{
+         color: hsl(230, 17%, 14%);
+         font-size: 4em;
+         font-weight: bolder;
+         padding-bottom: 0px;
+         margin-bottom: 0;
+         font-family: "Inter";
+      }
+
+      .ye3.dark{
+        color: hsl(0, 0%, 100%);
+      }
+
+      .fl{
+         letter-spacing: 0.3em;
+         color: hsl(228, 12%, 44%);
+         font-size: 0.9em;
+         text-transform: uppercase;
+         padding-bottom: 10px;
+      }
+
+      .fl.da{
+        color:hsl(228, 34%, 66%);
+      }
+      .fl1{
+         letter-spacing: 0.3em;
+         color: hsl(228, 12%, 44%);
+         font-size: 0.9em;
+         text-transform: uppercase;
+         padding-bottom: 10px;
+      }
+
+      .fl1.da{
+        color:hsl(228, 34%, 66%);
+      }
+
+      .fl2{
+         letter-spacing: 0.3em;
+         color: hsl(228, 12%, 44%);
+         font-size: 0.9em;
+         text-transform: uppercase;
+         padding-bottom: 10px;
+      }
+
+      .fl2.da{
+        color:hsl(228, 34%, 66%);
+      }
+
+      .fl3{
+         letter-spacing: 0.3em;
+         color: hsl(228, 12%, 44%);
+         font-size: 0.9em;
+         text-transform: uppercase;
+         padding-bottom: 10px;
+      }
+
+      .fl3.da{
+        color:hsl(228, 34%, 66%);
+      }
+      .up{
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        color: hsl(163, 72%, 41%);
+        padding-top: 10px;
+        font-weight: bolder;
+      }
+      
+      .pict{
+        padding-right: 6px;
+        align-self: center;
+        padding-bottom: 5px;
+      }
+      
+      .ov{
+        font-size: 1.8em;
+        font-weight: bolder;
+        color: hsl(228, 12%, 44%);
+        margin-top: 30px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      .ov.dark{
+        color: hsl(0, 0%, 100%);
+      }
+      .col{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        flex-wrap: wrap;
+        
+      }
+      
+      .c1{
+        display: flex;
+        background-color: hsl(227, 47%, 96%);
+        max-width: 7cm;
+        padding: 6px;
+        flex: 25%;
+        border-radius: 5px 5px 5px 5px;
+        
+      }
+      .c1.dark{
+        background-color: hsl(228, 28%, 20%);
+      }
+      .f{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .pv{
+        padding-left: 20px;
+        padding-right: 70px;
+        margin-top: 20px;
+        color: hsl(228, 12%, 44%);
+        font-size: 1.2em;
+        padding-bottom: 15px;
+        font-weight: bolder;
+      }
+      .pv.dark{
+        color: hsl(228, 34%, 66%);
+      }
+      .pv1{
+        padding-left: 20px;
+        padding-right: 70px;
+        margin-top: 20px;
+        color: hsl(228, 12%, 44%);
+        font-size: 1.2em;
+        padding-bottom: 15px;
+        font-weight: bolder;
+      }
+      .pv1.dark{
+        color: hsl(228, 34%, 66%);
+      }
+      .pv2{
+        padding-left: 20px;
+        padding-right: 70px;
+        margin-top: 20px;
+        color: hsl(228, 12%, 44%);
+        font-size: 1.2em;
+        padding-bottom: 15px;
+        font-weight: bolder;
+      }
+      .pv2.dark{
+        color: hsl(228, 34%, 66%);
+      }
+      .pv3{
+        padding-left: 20px;
+        padding-right: 70px;
+        margin-top: 20px;
+        color: hsl(228, 12%, 44%);
+        font-size: 1.2em;
+        padding-bottom: 15px;
+        font-weight: bolder;
+      }
+      .pv3.dark{
+        color: hsl(228, 34%, 66%);
+      }
+      .pv4{
+        padding-left: 20px;
+        padding-right: 70px;
+        margin-top: 20px;
+        color: hsl(228, 12%, 44%);
+        font-size: 1.2em;
+        padding-bottom: 15px;
+        font-weight: bolder;
+      }
+      .pv4.dark{
+        color: hsl(228, 34%, 66%);
+      }
+      .pv5{
+        padding-left: 20px;
+        padding-right: 70px;
+        margin-top: 20px;
+        color: hsl(228, 12%, 44%);
+        font-size: 1.2em;
+        padding-bottom: 15px;
+        font-weight: bolder;
+      }
+      .pv5.dark{
+        color: hsl(228, 34%, 66%);
+      }
+      .pv6{
+        padding-left: 20px;
+        padding-right: 70px;
+        margin-top: 20px;
+        color: hsl(228, 12%, 44%);
+        font-size: 1.2em;
+        padding-bottom: 15px;
+        font-weight: bolder;
+      }
+      .pv6.dark{
+        color: hsl(228, 34%, 66%);
+      }
+      .pv7{
+        padding-left: 20px;
+        padding-right: 70px;
+        margin-top: 20px;
+        color: hsl(228, 12%, 44%);
+        font-size: 1.2em;
+        padding-bottom: 15px;
+        font-weight: bolder;
+      }
+      .pv7.dark{
+        color: hsl(228, 34%, 66%);
+      }
+      .ic{
+        margin-top: 20px;
+       padding-left: 30px;
+       padding-right: 25px;
+       padding-bottom: 15px;
+      }
+      .y{
+        margin-left: 20px;
+        padding-bottom: 15px;
+        font-size: 2.5em;
+        color: hsl(230, 17%, 14%);
+        font-weight: bolder;
+      }
+      .y.dark{
+           color: white;
+      }
+      .y1{
+        margin-left: 20px;
+        padding-bottom: 15px;
+        font-size: 2.5em;
+        color: hsl(230, 17%, 14%);
+        font-weight: bolder;
+      }
+      .y1.dark{
+           color: white;
+      }
+
+      .y2{
+        margin-left: 20px;
+        padding-bottom: 15px;
+        font-size: 2.5em;
+        color: hsl(230, 17%, 14%);
+        font-weight: bolder;
+      }
+      .y2.dark{
+           color: white;
+      }
+
+      .y3{
+        margin-left: 20px;
+        padding-bottom: 15px;
+        font-size: 2.5em;
+        color: hsl(230, 17%, 14%);
+        font-weight: bolder;
+      }
+      .y3.dark{
+           color: white;
+      }
+
+
+      .y4{
+        margin-left: 20px;
+        padding-bottom: 15px;
+        font-size: 2.5em;
+        color: hsl(230, 17%, 14%);
+        font-weight: bolder;
+      }
+      .y4.dark{
+           color: white;
+      }
+
+      .yq5{
+        margin-left: 20px;
+        padding-bottom: 15px;
+        font-size: 2.5em;
+        color: hsl(230, 17%, 14%);
+        font-weight: bolder;
+      }
+      .yq5.dark{
+           color: white;
+      }
+
+
+      .y6{
+        margin-left: 20px;
+        padding-bottom: 15px;
+        font-size: 2.5em;
+        color: hsl(230, 17%, 14%);
+        font-weight: bolder;
+      }
+      .y6.da{
+           color: white;
+      }
+
+      .y7{
+        margin-left: 20px;
+        padding-bottom: 15px;
+        font-size: 2.5em;
+        color: hsl(230, 17%, 14%);
+        font-weight: bolder;
+      }
+      .y7.dark{
+           color: white;
+        
+      }
+      .per{
+        margin-right: 22px;
+        padding-bottom: 15px;
+        color: hsl(163, 72%, 41%);
+        align-self: center;
+        font-weight: bolder;
+      }
+      .cont{
+        padding-top: 25px;
+      }
+
+      .cardone:hover{
+        background-color: #e1e3f0;
+        cursor: pointer;
+      }
+      .cardone.dark:hover{
+        background-color: 	rgba(139, 151, 198,0.5);
+        
+        cursor: pointer;
+      }
+      .cardone2.dark:hover{
+        background-color: rgba(139, 151, 198,0.5);
+        cursor: pointer;
+      }
+      .cardone2:hover{
+        background-color: #e1e3f0;
+        cursor: pointer;
+      }
+      .cardone3:hover{
+        background-color: #e1e3f0;
+        cursor: pointer;
+      }
+      .cardone3.dark:hover{
+        background-color: rgba(139, 151, 198,0.5);
+        cursor: pointer;
+      }
+      .cardone4.dark:hover{
+        background-color: rgba(139, 151, 198,0.5);
+        cursor: pointer;
+      }
+      .cardone4:hover{
+        background-color: #e1e3f0;
+        cursor: pointer;
+      }
+      .c1:hover{
+        background-color: #e1e3f0;
+        cursor: pointer;
+      }
+      .c1.dark:hover{
+        background-color: rgba(139, 151, 198,0.5);
+        cursor: pointer;
+      }
+      .lab{
+         display: inline-block;
+         height: 23px;
+         width: 50px;
+         border-radius: 20px;
+         background-color: hsl(230, 22%, 74%);
+         position: relative;
+
+      }
+      .ball{
+        background-color: #fff;
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        left: 2px;
+         top: 0.5px;
+         bottom: 1px;
+        position: absolute;
+        transition: 0.2s linear;
+      }
+      
+      .vb{
+        opacity: 0;
+        position: absolute;
+      }
+      
+      .vb:checked + .lab{
+        background-image: linear-gradient(90deg, #378fe6, #009fef, #00adf0, #00b9e6, #00c4d5, #00cdbc, #00d4a0, #3eda82); 
+      }
+
+      .vb:checked + .lab .ball{
+        transform: translateX(24px);
+        
+      }
+
+       
+      @media screen and (max-width:500px) {
+       
+        .bg{
+          max-width: 100%;
+      
+        }
+        .bgm{
+         margin-right: 10px;
+         margin-left: 10px;
+        }
+
+        .top{
+         display: flex;
+         flex-direction: column;
+         
+    
+
+      }
+       
+        .titlep{
+         
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 10px;
+           
+
+        }
+    
+       .he{
+        white-space: nowrap;
+        font-size: 1.5em;
+       
+        
+       }
+
+       .flow{
+         white-space: nowrap;
+         align-self: flex-start;
+         padding-bottom: 15px;
+       }
+
+       .sub{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-self: flex-start;
+         padding-top:10px;
+         border-top: 2px solid; 
+         border-color:hsl(228, 12%, 44%) ;
+       }
+        
+        .tog{
+              padding-right: 218px;
+              
+        }
+
+        .cardcol{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+   
+        
+        }
+
+        .cardone ,.cardone2 , .cardone3 , .cardone4{
+        
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        flex-wrap: wrap;
+        
+      }
+
+      .c1{
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      .ic{
+        margin-top: 20px;
+       padding-left: 50px;
+       padding-right: 25px;
+       padding-bottom: 15px;
+      }
+
+      .y1{
+        padding-right: 50px;
+      }
+      .y4, .y6{
+        padding-right: 50px;
+      }
+      .yq5{
+        padding-right: 50px;
+      }
+
+      }
+
+
+
+
+
+
+
+
+
+  </style>
+  
+</head>
+<body>
+ <div class="bg">
+  <div class="bgm">
+  <div class="top">
+    <div class="titlep">
+     <div class="he">Social Media Dashboard</div>
+     <div class="flow">Total Followers: 23,004</div>
+    </div>
+    <div class="sub">
+     <div class="tog">Dark Mode</div>
+     <div class="tog1">
+       <input type="checkbox" id="toggl" class="vb">
+       <label class="lab" for="toggl">
+         <div class="ball"></div>
+       </label>
+       
+     </div>
+    </div>
+  </div>
+  <div class="cardcol">
+    <div class="cardone">
+      <div class="icon">
+         <div class="pic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-facebook.svg"></div>
+         <div class="name">@nathanf</div>
+      </div>
+    <div class="cl">
+      <div class="ye" id="ye">1987</div>
+      <div class="fl">Followers</div>
+      
+      </div>
+    <div class="up">
+      <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-up.svg"></div>
+      <div class="dt">12 Today</div>
+    </div>
+    </div>
+
+    <div class="cardone2">
+      <div class="icon">
+         <div class="pic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-twitter.svg"></div>
+         <div class="name1">@nathanf</div>
+      </div>
+    <div class="cl">
+      <div class="ye1">1044</div>
+      <div class="fl1">Followers</div>
+      
+      </div>
+    <div class="up">
+      <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-up.svg"></div>
+      <div class="dt">99 Today</div>
+    </div>
+    </div>
+
+    <div class="cardone3">
+      <div class="icon">
+         <div class="pic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-instagram.svg"></div>
+         <div class="name2">@realnathanf</div>
+      </div>
+    <div class="cl">
+      <div class="ye2">11k</div>
+      <div class="fl2">Followers</div>
+      
+      </div>
+    <div class="up">
+      <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-up.svg"></div>
+      <div class="dt">1099 Today</div>
+    </div>
+    </div>
+
+    <div class="cardone4">
+      <div class="icon">
+         <div class="pic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-youtube.svg"></div>
+         <div class="name3">Nathan F.</div>
+      </div>
+    <div class="cl">
+      <div class="ye3">8239</div>
+      <div class="fl3"> Subscribers</div>
+      
+      </div>
+    <div class="up">
+      <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-down.svg"></div>
+      <div class="dt" style="color:hsl(356, 69%, 56%);">144 Today</div>
+    </div>
+    </div>
+
+  </div>
+
+  <div class="ov">Overview - Today</div> 
+  <div class="col">
+     <div class="c1">
+       <div class="f">
+       <div class="pv" style="padding-right: 50px;">Page Views</div>
+       <div class="ic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-facebook.svg"></div>
+       <div class="y">87</div>
+       <div class="up">
+        <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-up.svg"></div>
+      <div class="dt" style="margin-right:22px ;">3%</div>
+      </div> 
+       </div>
+     </div>
+
+
+
+     <div class="c1">
+      <div class="f">
+      <div class="pv1">Likes</div>
+      <div class="ic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-facebook.svg"></div>
+      <div class="y1">52</div>
+      <div class="up">
+        <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-down.svg"></div>
+      <div class="dt" style="color: hsl(356, 69%, 56%);margin-right:22px ;">2%</div>
+      </div>  
+      </div>
+    </div>
+
+
+    <div class="c1">
+      <div class="f">
+      <div class="pv2">Likes</div>
+      <div class="ic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-instagram.svg"></div>
+      <div class="y2">5462</div>
+      <div class="up">
+        <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-up.svg"></div>
+      <div class="dt" style="margin-right:22px ;">2257%</div>
+      </div> 
+      </div>
+    </div>
+
+
+
+    <div class="c1">
+      <div class="f">
+      <div class="pv3" style="padding-right: 50px;">Profile Views</div>
+      <div class="ic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-instagram.svg"></div>
+      <div class="y3">52k</div>
+      <div class="up">
+        <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-up.svg"></div>
+      <div class="dt" style="margin-right:22px ;">1375%</div>
+      </div> 
+      </div>
+    </div>
+
+   
+    </div>
+
+    <div class="cont">
+      <div class="col">
+      <div class="c1">
+        <div class="f">
+        <div class="pv4">Retweets</div>
+        <div class="ic " style="padding-left: 5px;"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-twitter.svg"></div>
+        <div class="y4">117</div>
+        <div class="up">
+          <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-up.svg"></div>
+        <div class="dt" style="margin-right:22px ;">303%</div>
+        </div>  
+        </div>
+      </div>
+  
+  
+  
+  
+      <div class="c1">
+        <div class="f">
+        <div class="pv5">Likes</div>
+        <div class="ic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-twitter.svg"></div>
+        <div class="yq5">507</div>
+        <div class="up">
+          <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-up.svg"></div>
+        <div class="dt" style="margin-right:22px ;">553%</div>
+        </div> 
+        </div>
+      </div>
+  
+  
+  
+      <div class="c1">
+        <div class="f">
+        <div class="pv6">Likes</div>
+        <div class="ic"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-youtube.svg"></div>
+        <div class="y6">107</div>
+        <div class="up">
+          <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-down.svg"></div>
+        <div class="dt" style="color: hsl(356, 69%, 56%);margin-right:22px ;">19%</div>
+        </div>  
+        </div>
+      </div>
+  
+  
+  
+      <div class="c1">
+        <div class="f">
+        <div class="pv7">Total Views</div>
+        <div class="ic" style="padding-left: 7px;"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-youtube.svg"></div>
+        <div class="y7">1407</div>
+        <div class="up">
+          <div class="pict"><img src="E:\projects\social-media-dashboard-with-theme-switcher-master\images\icon-down.svg"></div>
+        <div class="dt" style="color: hsl(356, 69%, 56%);margin-right:22px ;">12%</div>
+        </div>  
+      </div>
+      </div>
+  
+      </div>
+     </div>
+     <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">ADARSH</a>.
+    </div>
+
+  </div>
+
+
+  
+  </div>
+ </div>
+
+ <script>
+   const checkbox =  document.getElementById('toggl');
+
+   checkbox.addEventListener('change', () => {
+              document.body.classList.toggle('dark');
+              document.getElementsByClassName('bg')[0].classList.toggle('dar');
+              document.getElementsByClassName('he')[0].classList.toggle('dark');
+              document.getElementsByClassName('flow')[0].classList.toggle('dark');
+              document.getElementsByClassName('ov')[0].classList.toggle('dark');
+              document.getElementsByClassName('ye')[0].classList.toggle('dark');
+              document.getElementsByClassName('ye1')[0].classList.toggle('dark');
+              document.getElementsByClassName('ye2')[0].classList.toggle('dark');
+              document.getElementsByClassName('ye3')[0].classList.toggle('dark');
+              document.getElementsByClassName('name')[0].classList.toggle('da');
+              document.getElementsByClassName('name1')[0].classList.toggle('da');
+              document.getElementsByClassName('name2')[0].classList.toggle('da');
+              document.getElementsByClassName('name3')[0].classList.toggle('da');
+              document.getElementsByClassName('fl')[0].classList.toggle('da');
+              document.getElementsByClassName('fl1')[0].classList.toggle('da');
+              document.getElementsByClassName('fl2')[0].classList.toggle('da');
+              document.getElementsByClassName('fl3')[0].classList.toggle('da');
+              document.getElementsByClassName('c1')[0].classList.toggle('dark');
+              document.getElementsByClassName('c1')[1].classList.toggle('dark');
+              document.getElementsByClassName('c1')[2].classList.toggle('dark');
+              document.getElementsByClassName('c1')[3].classList.toggle('dark');
+              document.getElementsByClassName('c1')[4].classList.toggle('dark');
+              document.getElementsByClassName('c1')[5].classList.toggle('dark');
+              document.getElementsByClassName('c1')[6].classList.toggle('dark');
+              document.getElementsByClassName('c1')[7].classList.toggle('dark');
+              document.getElementsByClassName('tog')[0].classList.toggle('dark');
+              document.getElementsByClassName('y')[0].classList.toggle('dark');  
+              document.getElementsByClassName('y1')[0].classList.toggle('dark');  
+              document.getElementsByClassName('y2')[0].classList.toggle('dark');  
+              document.getElementsByClassName('y3')[0].classList.toggle('dark');  
+              document.getElementsByClassName('y4')[0].classList.toggle('dark');  
+              document.getElementsByClassName('yq5')[0].classList.toggle('dark');  
+              document.getElementsByClassName('y6')[0].classList.toggle('da');  
+              document.getElementsByClassName('y7')[0].classList.toggle('dark');  
+              document.getElementsByClassName('cardone')[0].classList.toggle('dark');
+              document.getElementsByClassName('cardone2')[0].classList.toggle('dark');
+              document.getElementsByClassName('cardone3')[0].classList.toggle('dark');
+              document.getElementsByClassName('cardone4')[0].classList.toggle('dark');
+              document.getElementsByClassName('pv')[0].classList.toggle('dark');
+              document.getElementsByClassName('pv1')[0].classList.toggle('dark');
+              document.getElementsByClassName('pv2')[0].classList.toggle('dark');
+              document.getElementsByClassName('pv3')[0].classList.toggle('dark');
+              document.getElementsByClassName('pv4')[0].classList.toggle('dark');
+              document.getElementsByClassName('pv5')[0].classList.toggle('dark');
+              document.getElementsByClassName('pv6')[0].classList.toggle('dark');
+              document.getElementsByClassName('pv7')[0].classList.toggle('dark');
+              
+              
+              
+              
+            });
+ </script>
+
+</body>
+</html>
